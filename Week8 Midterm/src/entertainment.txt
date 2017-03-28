@@ -1,0 +1,30 @@
+Movie
+Finding Dori
+Disney
+PG
+A small fish in a big pond
+Movie
+Cool Runnings
+Paramaount
+PG13
+We're a Jamacian Bobsled Team.
+Movie
+Howl's Moving Castle
+Studio Ghibli
+PG
+Anime with the Demon Calcipher powering a moving castle.
+TVShow
+Ben 10
+PG
+Ben10 kicks moster's butts.
+Tuesday
+TVShow
+The Cosby Show
+PG
+Don't drink the punch... No matter what.
+Monday
+TVShow
+Rick and Morty
+MA
+I'm Squanching in here!
+Saturday
