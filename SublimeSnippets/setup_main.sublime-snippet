@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+// Jakob Vendegna
+// CIS 161
+// ${1:date} 
+// ${2:description}
+
+public class ${3:ClassName} 
+{
+	public static void main(String[] args) 
+	{
+		${4:insert code here}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>smain</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
