@@ -15,7 +15,7 @@ public class MergeSortTest
 
 	private static void sortArray(int[] data, int low, int high)
 	{
-		if ((high - low) <= 1) //  base case == 1
+		if ((high - low) >= 1) //  base case == 1
 		{
 			int middle1 = (low + high) / 2;
 			int middle2 = middle1 + 1;
@@ -108,11 +108,11 @@ public class MergeSortTest
 	{
 		SecureRandom generator = new SecureRandom();
 
-		int[] data = new int[10];
+		int[] data = new int[1000];
 
 		for (int i = 0; i < data.length; i++)
 		{
-			data[i] = 10 + generator.nextInt(90);
+			data[i] = 10 + generator.nextInt(900);
 		}
 		System.out.printf("Unsorted Array:%n%s%n%n", 
 			Arrays.toString(data));
