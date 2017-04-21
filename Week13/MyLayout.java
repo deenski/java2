@@ -4,6 +4,8 @@
 // set up layout for gui paint program
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -21,10 +23,16 @@ public class MyLayout extends JFrame
 		super("Testing Layout");
 		setLayout(new BorderLayout());
 
-		add(menu);
-		add(drawArea);
+		menu.setPreferredSize(new Dimension(125, 700));
+		menu.setBackground(255, 0, 0);
+
+		drawArea.setPreferredSize(new Dimension(375, 700));
+		drawArea.setBackground(240,255,255);
+
+		add(menu, BorderLayout.EAST);
+		add(drawArea, BorderLayout.CENTER);
       
-		menu.add(clearButton, BorderLayout.CENTER);
+		menu.add(clearButton, BorderLayout.SOUTH);
 	}
 
 }
