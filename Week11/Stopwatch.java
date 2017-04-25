@@ -2,7 +2,7 @@
 // CIS 161
 // 4/8/17 
 // Stopwatch for timing methods
-// basically a copy of 
+// A regurgitation of this Stopwatch class: http://algs4.cs.princeton.edu/14analysis/Stopwatch.java.html
 
 public class Stopwatch 
 {
