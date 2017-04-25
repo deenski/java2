@@ -19,7 +19,6 @@ public class MyComicCatalog extends JFrame
 	private final JButton[] buttons;
 	private final JRadioButton[] radioButtons;
 	private final CharSequence edits = "edit";
-	private final CharSequence results = "Result";
 	private final ButtonGroup buttonGroup;
 	private final String[] textFieldNames;
    private final String[] buttonLabels;
@@ -71,13 +70,13 @@ public class MyComicCatalog extends JFrame
 				textFields[i].setEditable(true);
 				System.out.println("Setting editable");
 			}
-			else if (textFieldNames[i].contains(results))
+			else 
 			{
 				textFields[i] = new JTextField(textFieldNames[i], 24);
 				textFields[i].setEditable(false);
 				System.out.println("Setting Final");
 			}
-		}
+
 
 		// initialize buttons
 		for (int i = 0; i < buttonLabels.length; i++)
