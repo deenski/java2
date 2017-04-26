@@ -3,7 +3,8 @@
 // 4/25/17 
 // Comic Book Class
 
-public class ComicBook extends Book
+
+public class GraphicNovel extends Book
 {
 	private String name;
 	private String  author;
@@ -14,7 +15,7 @@ public class ComicBook extends Book
 	private double price_payed;
 	private double current_value;
 
-	public ComicBook(String n, String a, 
+	public GraphicNovel(String n, String a, 
 			String rD, int iN, boolean bag,
 			double gR, double pP, double cV)
 	{
@@ -28,7 +29,7 @@ public class ComicBook extends Book
 		this.current_value = cV;
 	}
 
-	public ComicBook(String n, String a, 
+	public GraphicNovel(String n, String a, 
 			String rD, int iN, boolean bag,
 			double gR, double pP)
 	{
