@@ -2,70 +2,54 @@
 // CIS 161
 // 4/25/17 
 // Comic Book Class
-import java.util.Calendar;
 
-public class ComicBook 
+public class ComicBook extends Book
 {
-	private String name;
-	private String  author;
-	private Calendar releaseDate;
-	private int issueNumber;
 	private boolean bagged;
-	private double grade;
-	private double price_payed;
-	private double current_value;
+	private double currentValue;
+	private double profit;
 
-	public ComicBook(String n, String a, 
-			Calendar rD, int iN, boolean bag,
-			double gR, double pP, double cV)
+	public ComicBook(String name, String author, 
+			String releaseDate, int issueNumber, boolean bagged,
+			double grade, double pricePayed, double currentValue)
 	{
-		this.name = n;
-		this.author = a;
-		this.releaseDate =  rD;
-		this.issueNumber = iN;
-		this.bagged = bag;
-		this.grade = gR;
-		this.price_payed = pP;
-		this.current_value = cV;
+		super(name, author, releaseDate, 
+			issueNumber, grade, pricePayed, currentValue);
+         
+         this.bagged = bagged;
+         this.currentValue = currentValue;
+
+         if (pricePayed <= currentValue)
+         {
+         	this.profit = currentValue - pricePayed;
+         }
+         else
+         {
+         	this.profit = pricePayed - currentValue;
+         }
+         
 	}
 
-	public ComicBook(String n, String a, 
-			Calendar rD, int iN, boolean bag,
-			double gR, double pP)
+	public ComicBook(String name, String author, 
+			String releaseDate, int issueNumber, boolean bagged,
+			double grade, double pricePayed)
 	{
-		this.name = n;
-		this.author = a;
-		this.releaseDate =  rD;
-		this.issueNumber = iN;
-		this.bagged = bag;
-		this.grade = gR;
-		this.price_payed = pP;
+		super(name, author, releaseDate, 
+			issueNumber, grade, pricePayed);
+         
+         this.bagged = bagged;
+         this.profit = 0;
+	}
+
+	public void setBagged(boolean tF)
+	{
+		this.bagged = tF;
 	}
 
 	public void setCurrentValue(double cV)
 	{
 		if (cV >= 0.00)
-			this.current_value = cV;
-	}
-
-	public String getName()
-	{
-		return this.name;
-	}
-
-	public String getAuthor()
-	{
-		return this.author;
-	}
-
-	public Calendar getDate()
-	{
-		return this.releaseDate;
-	}
-
-	public int getIssue()
-	{
-		return this.issueNumber;
+			this.currentValue = cV;
 	}
 
 	public boolean getBagged()
@@ -73,18 +57,23 @@ public class ComicBook
 		return this.bagged;
 	}
 
-	public double getGrade()
-	{
-		return this.grade;
-	}
-
-	public double getPricePayed()
-	{
-		return this.price_payed;
-	}
-
 	public double getCurrentValue()
 	{
-		return this.current_value;
+		return this.currentValue;
 	}
+
+	public double getProfit()
+	{
+		return this.profit;
+	}
+
+	@Override
+	public String getType()
+	{
+		return "comic";
+	}
+	// public String toString()
+// 	{
+// 		
+// 	}
 }
